@@ -110,7 +110,7 @@ td {
   
 
     <td>{{$item->updated_at}}</td>
-    <form action="{{ route('/update', ['id' => $item->id]) }}" method="POST">
+    <form action="{{ route('list.update', ['id' => $item->id]) }}" method="POST">
     @csrf
     <td><input type="text"  value="{{$item->list}}"></td>
     <td>
@@ -120,7 +120,7 @@ td {
 
   <td>
     <form action=
-    "{{ route('/delete', ['id' => $item->id]) }}"method="POST">
+    "{{ route('list.delete', ['id' => $item->id]) }}"method="POST">
     @csrf
     <input type="submit" value="削除,{{$item->id}} " class="third" name="id">
   </form>
