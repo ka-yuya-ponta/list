@@ -110,19 +110,16 @@ td {
   
 
     <td>{{$item->updated_at}}</td>
-    <form action="{{ route('list.update', ['id' => $item->id]) }}" method="POST">
-    @csrf
+    <form action="/update">
     <td><input type="text"  value="{{$item->list}}"></td>
     <td>
-      <input type="submit" value="更新,{{$item->id}} " class="second" name="id">
+      @csrf
+      <input type="submit" value="更新" class="second" name="update">
     </td>
-  </form>    
-
+  </form>   
   <td>
-    <form action=
-    "{{ route('list.delete', ['id' => $item->id]) }}"method="POST">
-    @csrf
-    <input type="submit" value="削除,{{$item->id}} " class="third" name="id">
+    <form action="/delete">
+    <input type="submit" value="削除" class="third" name="delete">
   </form>
   </td>
   

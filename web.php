@@ -14,9 +14,11 @@ use App\Http\Controllers\ListController;
 |
 */
 
-Route::get('/', [ListController::class,'index']);
-Route::post('/update',[ListController::class,'update'])->name('list.update');
-Route::post('/delete',[ListController::class,'delete'])->name('list.delete');;
+Route::get('/', [ListController::class,'index']
+);
 
+Route::post('/update',[ListController::class,'update']);
+Route::post('/delete',[ListController::class,'delete']);
+ROute::get('/good',[ListController::class,'good']);
 
 
